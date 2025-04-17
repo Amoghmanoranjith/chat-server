@@ -6,6 +6,8 @@ import RoomModel from './models/room.schema.js';
 import MessageModel from './models/message.schema.js';
 
 // 
+console.log("Connecting to MongoDB URI:", process.env.MONGO_URI);
+console.log("Connecting to MongoDB URI:", process.env);
 mongoose.connect(process.env.MONGO_URI);
 
 const db = mongoose.connection;
