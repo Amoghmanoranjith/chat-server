@@ -5,7 +5,7 @@ import MessageModel from './models/message.schema.js';
 
 // 
 
-mongoose.connect("mongodb+srv://amoghmanoranjith:yCvURQftIilbYFqu@cluster0.vvzup.mongodb.net/mernChat?");
+mongoose.connect(process.env.MONGO_URI);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, '❌ MongoDB error:'));
