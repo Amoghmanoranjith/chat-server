@@ -1,13 +1,13 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express';
 import cors from 'cors';
 import { Server } from 'socket.io';
-import dotenv from 'dotenv'
 import authRoutes from './routes/user.route.js';
 import roomRoutes from './routes/room.route.js'
 import { addUser, removeUser, getUser, getUsersInRoom } from './user.js';
 import { User, Room, Message } from './db.js';
 
-dotenv.config()
 const app = express();
 const PORT = process.env.PORT || 5000;
 

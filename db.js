@@ -1,10 +1,11 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import mongoose from 'mongoose';
 import UserModel from './models/user.schema.js';
 import RoomModel from './models/room.schema.js';
 import MessageModel from './models/message.schema.js';
 
 // 
-
 mongoose.connect(process.env.MONGO_URI);
 
 const db = mongoose.connection;
