@@ -44,6 +44,7 @@ io.on("connection", (socket) => {
         return callback("duplicate logins to the same room");
       }
       socket.join(roomId);
+      console.log(userId, )
       const isAdmin = dbRoom.room_admin.toString() === userId.toString();
       const role = isAdmin ? "admin" : "participant";
       // welcome message to the socket
